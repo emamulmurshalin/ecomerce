@@ -13,4 +13,9 @@ class Sales extends Model
         'product_id',
         'sales_quantity'
     ];
+
+    public function products()
+    {
+        $this->belongsTo(Product::class);
+    }
 }
