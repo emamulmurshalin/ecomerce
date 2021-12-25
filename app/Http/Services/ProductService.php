@@ -17,6 +17,6 @@ class ProductService
 
     public function store($data)
     {
-        $this->repository->storeProduct($data);
+        return $this->repository->storeProduct($data);
     }
 }

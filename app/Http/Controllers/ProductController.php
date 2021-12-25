@@ -27,6 +27,10 @@ class ProductController extends Controller
             'selling_price' => $request->selling_price,
             'available_quantity' => $request->available_quantity,
         ];
-        $this->service->store($data);
+        $save = $this->service->store($data);
+        if ($save){
+            return redirect('/products/create');
+        }
+
     }
 }

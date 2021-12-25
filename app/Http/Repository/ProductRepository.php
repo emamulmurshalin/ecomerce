@@ -17,6 +17,6 @@ class ProductRepository
 
     public function storeProduct($data)
     {
-        $this->model->create($data);
+        return $this->model->create($data);
     }
 }
