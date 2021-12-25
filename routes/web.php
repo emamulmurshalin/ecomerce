@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SalesController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,8 @@ Route::post('/products/store', [ProductController::class, 'store'])
 
 Route::get('/products/sales', [SalesController::class, 'create'])
     ->name('sales.create');
-
 Route::post('/products/sales/store', [SalesController::class, 'store'])
     ->name('sales.store');
+
+Route::get('/products/report', [ReportController::class, 'index'])
+    ->name('product.report');
